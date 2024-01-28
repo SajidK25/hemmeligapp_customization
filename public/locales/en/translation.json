@@ -1,0 +1,92 @@
+{
+    "sign_in": "Sign in",
+    "sign_out": "Sign out",
+    "sign_up": "Sign up",
+    "account": "Account",
+    "account_settings": "Account settings",
+    "instance_settings": "Instance settings",
+    "copied": "Copied",
+    "copy": "Copy",
+    "header": {
+        "nav": {
+            "close": "Close navigation",
+            "open": "Open navigation"
+        },
+        "session": {
+            "auth": "Authentication",
+            "expire": "Your session is about to expire. Do you want to extend it?",
+            "update": "Update session"
+        }
+    },
+    "home": {
+        "app_subtitle": "Paste a password, confidential message, or private data.",
+        "welcome": "Ensure your sensitive data remains encrypted, secure, and confidential.",
+        "bummer": "Bummer!",
+        "maintxtarea": "Write your sensitive information..",
+        "title": "Title",
+        "lifetime": "Lifetime",
+        "max_views": "Max views",
+        "enable_password": "Enable password",
+        "optional_password": "Your optional password",
+        "burn_aftertime": "Burn the secret only after the time expires",
+        "restrict_from_ip": "Restrict the secret from being opened based on an IP or a CIDR range. Example CIDR: 192.168.1.0/24.",
+        "restrict_from_ip_placeholder": "Restrict by IP or CIDR",
+        "login_to_upload": "Sign in to upload files",
+        "upload_files": "Upload files",
+        "your_secret_url": "Your secret URL",
+        "share": "Share",
+        "create_secret_link": "Create a secret link",
+        "or": "Separate the link and decryption key",
+        "secret_url": "Secret URL without decryption key",
+        "decryption_key": "Decryption key",
+        "create_new": "Create new",
+        "delete": "Delete",
+        "link_only_works_once": "The secret link, by default, is a one-time use only, after which it will vanish.",
+        "app_name_meaning": "[he`m:(ə)li], means secret in Norwegian.",
+        "please_add_secret": "Please add a secret.",
+        "14_days": "14 days",
+        "28_days": "28 days",
+        "7_days": "7 days",
+        "3_days": "3 days",
+        "1_day": "1 day",
+        "12_hours": "12 hours",
+        "4_hours": "4 hours",
+        "1_hour": "1 hour",
+        "30_minutes": "30 minutes",
+        "5_minutes": "5 minutes",
+        "successful_share": "Successful share",
+        "get_your_secret": "Get your secret at hemmelig.app."
+    },
+    "secret": {
+        "view_your_secret": "View your secret",
+        "will_show_once": "By default we will only show the secret once.",
+        "views_left": "Views left:",
+        "password_required": "A password is required to open this secret",
+        "view_secret": "View the secret",
+        "create_secret": "Create a new secret",
+        "convert_b64": "Convert text to base64",
+        "convert_utf8": "Convert base64 to plain text"
+    },
+    "settings": {
+        "success": "Success",
+        "description": "Update the Hemmelig instance state",
+        "updated": "Settings updated",
+        "update": "Update settings",
+        "deleted": "Account deleted"
+    },
+    "users": {
+        "users": "Users",
+        "edit": "Edit",
+        "update": "Update user",
+        "add": "Add user",
+        "saved": "Saved",
+        "save": "Save",
+        "more": "Load more",
+        "deleted": "User deleted"
+    },
+    "secrets": {
+        "secrets": "Secrets",
+        "secret": "Secret",
+        "deleted": "Secret deleted"
+    }
+}

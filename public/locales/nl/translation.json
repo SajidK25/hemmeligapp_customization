@@ -1,0 +1,92 @@
+{
+    "sign_in": "Inloggen",
+    "sign_out": "Uitloggen",
+    "sign_up": "Registreren",
+    "account": "Account",
+    "account_settings": "Accountinstellingen",
+    "instance_settings": "Serverinstellingen",
+    "copied": "Gekopieerd",
+    "copy": "Kopiëren",
+    "header": {
+        "nav": {
+            "close": "Menu sluiten",
+            "open": "Menu openen"
+        },
+        "session": {
+            "auth": "Authenticatie",
+            "expire": "Je sessie is bijna verlopen. Nu verlengen?",
+            "update": "Sessie bijwerken"
+        }
+    },
+    "home": {
+        "app_subtitle": "Deel een wachtwoord, privébericht of vertrouwelijke gegevens.",
+        "welcome": "Houd gevoelige informatie versleuteld en gescheiden van e-mails en chatlogs.",
+        "bummer": "Helaas!",
+        "maintxtarea": "Plaats hier de geheime informatie...",
+        "title": "Titel",
+        "lifetime": "Geldigheid",
+        "max_views": "Max. aantal weergaven",
+        "enable_password": "Wachtwoord gebruiken",
+        "optional_password": "Optioneel wachtwoord",
+        "burn_aftertime": "Het geheim alleen verbranden als de geldigheidsduur is verstreken",
+        "restrict_from_ip": "Alleen toegankelijk maken voor een specifiek IP-adres of CIDR-bereik. Voorbeeld CIDR: 192.168.1.0/24.",
+        "restrict_from_ip_placeholder": "Inzage beperken op IP-adres of CIDR",
+        "login_to_upload": "Log in om bestanden te uploaden",
+        "upload_files": "Bestanden uploaden",
+        "your_secret_url": "Geheime link",
+        "share": "Delen",
+        "create_secret_link": "Geheime link maken",
+        "or": "Link en sleutel gescheiden aanbieden",
+        "secret_url": "Geheime link zonder sleutel",
+        "decryption_key": "Sleutel",
+        "create_new": "Nieuw geheim",
+        "delete": "Verwijderen",
+        "link_only_works_once": "De geheime link werkt standaard maar één keer en wordt daarna verwijderd.",
+        "app_name_meaning": "[he`m:(ə)li], betekent 'geheim' in het Noors.",
+        "please_add_secret": "Voeg een geheim toe.",
+        "14_days": "14 dagen",
+        "28_days": "28 dagen",
+        "7_days": "7 dagen",
+        "3_days": "3 dagen",
+        "1_day": "1 dag",
+        "12_hours": "12 uren",
+        "4_hours": "4 uren",
+        "1_hour": "1 uur",
+        "30_minutes": "30 minuten",
+        "5_minutes": "5 minuten",
+        "successful_share": "Geheim is gedeeld",
+        "get_your_secret": "Vind de geheime informatie op hemmelig.app."
+    },
+    "secret": {
+        "view_your_secret": "Bekijk het geheim",
+        "will_show_once": "Standaard wordt het geheim maar één keer getoond.",
+        "views_left": "Aantal resterende weergaven:",
+        "password_required": "Dit geheim vereist een wachtwoord",
+        "view_secret": "Geheim bekijken",
+        "create_secret": "Nieuw geheim delen",
+        "convert_b64": "Tekst naar Base64 converteren",
+        "convert_utf8": "Base64 naar platte tekst converteren"
+    },
+    "settings": {
+        "success": "Geslaagd",
+        "description": "Instellingen van deze Hemmelig-installatie",
+        "updated": "Instellingen bijgewerkt",
+        "update": "Bijwerken",
+        "deleted": "Account verwijderd"
+    },
+    "users": {
+        "users": "Gebruikers",
+        "edit": "Wijzigen",
+        "update": "Bijwerken",
+        "add": "Toevoegen",
+        "saved": "Opgeslagen",
+        "save": "Opslaan",
+        "more": "Meer laden",
+        "deleted": "Gebruiker verwijderd"
+    },
+    "secrets": {
+        "secrets": "Geheimen",
+        "secret": "Geheim",
+        "deleted": "Geheim verwijderd"
+    }
+}

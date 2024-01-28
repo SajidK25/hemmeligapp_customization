@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// TODO: We should migrate all camel cases to underscore
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["metrics"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("SECRET_DATABASE_URL")
+}
+
+model File {
+    id       String @id @unique @default(uuid())
+    type     String
+    ext      String
+    key      String
+    secret   Secret @relation(fields: [secretId], references: [id], onDelete: Cascade)
+    secretId String
+}
+
+model Secret {
+    id          String   @id @unique @default(uuid())
+    data        String
+    title       String?
+    maxViews    Int      @default(1)
+    files       File[]
+    password    String?
+    allowed_ip  String?
+    preventBurn Boolean  @default(false)
+    expiresAt   DateTime
+    user        User?    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+    user_id     String?
+}
+
+model User {
+    id        String   @id @unique @default(uuid())
+    username  String   @unique
+    email     String   @unique
+    password  String
+    role      String   @default("user")
+    generated Boolean  @default(false)
+    secrets   Secret[]
+}
+
+model Statistic {
+    id    String @id
+    value Int    @default(1)
+}
+
+model Settings {
+    id                            String  @id
+    disable_users                 Boolean @default(false)
+    disable_user_account_creation Boolean @default(false)
+    read_only                     Boolean @default(false)
+    disable_file_upload           Boolean @default(false)
+    restrict_organization_email   String  @default("")
+}

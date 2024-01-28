@@ -1,0 +1,117 @@
+{
+  "name": "hemmelig",
+  "version": "5.0.0",
+  "description": "Paste a password, secret message or private information",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "prisma migrate deploy && node server.js",
+    "test": "mocha tests/**/*.test.js --reporter nyan",
+    "test-watch": "mocha --watch tests/**/*.test.js --reporter nyan",
+    "build": "node pre.js && vite build",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+    "server-dev": "prisma migrate dev && NODE_ENV=development node pre.js && NODE_ENV=development nodemon server.js",
+    "client-dev": "NODE_ENV=development vite",
+    "docker-build": "docker build -t hemmelig .",
+    "docker-run": "docker run -p 3000:3000 -d --name=hemmelig -v ./data/hemmelig/:/var/tmp/hemmelig/upload/files -v ./database/:/home/node/hemmelig/database/ hemmelig",
+    "production-test": "npm run docker-build && npm run docker-run",
+    "prepare": "husky install",
+    "prettier": "prettier --write --ignore-unknown src/",
+    "publish-cli": "rm -rf dist/ && npx microbundle build --target node -i cli.js -o dist/ && npm publish",
+    "pkg": "rm -rf dist/ bin/ && npx esbuild cli.js --bundle --platform=node --outfile=dist/cli.cjs --define:import.meta.url=__dirname && npx pkg dist/cli.cjs --targets=node18-linux-arm64 --output=bin/hemmelig"
+  },
+  "bin": {
+    "hemmelig": "./dist/hemmelig.esm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemmeligOrg/Hemmelig.app.git"
+  },
+  "author": "Bjarne Øverli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HemmeligOrg/Hemmelig.app/issues"
+  },
+  "homepage": "/",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.450.0",
+    "@aws-sdk/lib-storage": "^3.450.0",
+    "@fastify/cookie": "^8.3.0",
+    "@fastify/cors": "^8.1.0",
+    "@fastify/helmet": "^9.1.0",
+    "@fastify/jwt": "^7.2.3",
+    "@fastify/multipart": "^7.1.1",
+    "@fastify/rate-limit": "^8.0.0",
+    "@fastify/static": "^6.5.0",
+    "@mantine/core": "^6.0.6",
+    "@mantine/form": "^6.0.6",
+    "@mantine/hooks": "^6.0.6",
+    "@mantine/modals": "^6.0.6",
+    "@prisma/client": "^4.12.0",
+    "@tabler/icons": "^1.83.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "email-validator": "^2.0.4",
+    "extract-domain": "^2.4.8",
+    "fastify": "^4.9.1",
+    "fastify-plugin": "^3.0.0",
+    "file-type": "^18.0.0",
+    "generate-password-browser": "^1.1.0",
+    "ip-range-check": "^0.2.0",
+    "is-base64": "^1.1.0",
+    "jsdom": "^22.1.0",
+    "meow": "^11.0.0",
+    "nanoid": "^3.1.31",
+    "node-fetch": "^2.6.7",
+    "pretty-bytes": "^4.0.2",
+    "react-qr-code": "^2.0.8",
+    "sanitize-filename": "^1.6.3",
+    "tweetnacl": "^0.14.5",
+    "tweetnacl-util": "^0.15.1",
+    "unfetch": "^4.2.0",
+    "validator": "^13.7.0",
+    "y8": "^1.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "buffer": "^6.0.3",
+    "classcat": "^5.0.3",
+    "concurrently": "^7.4.0",
+    "dayjs": "^1.11.7",
+    "deepmerge": "^4.2.2",
+    "dlv": "^1.1.3",
+    "husky": "^6.0.0",
+    "i18next": "^21.9.1",
+    "i18next-browser-languagedetector": "^6.1.5",
+    "i18next-http-backend": "^1.4.1",
+    "jszip": "^3.10.1",
+    "lint-staged": "^11.0.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1",
+    "prisma": "^4.12.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.18.5",
+    "react-quill": "^2.0.0",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^6.10.0",
+    "redux": "^4.1.1",
+    "vite": "^4.2.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
