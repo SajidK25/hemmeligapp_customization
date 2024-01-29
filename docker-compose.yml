@@ -1,10 +1,11 @@
 services:
-    hemmelig:
+    silent-speaker:
         build: 
             context: .
             dockerfile: Dockerfile
             network: host
-        image: hemmeligapp/hemmelig:v5.1.1 # Check the tags for what version to use
+        container_name: silent-speaker-container
+        image: silent_speaker
         hostname: hemmelig
         init: true
         volumes:
