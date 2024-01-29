@@ -46,7 +46,6 @@ import { useTranslation } from 'react-i18next';
 import config from '../../config';
 
 import style from './style.module.css';
-import IconIntoImg from '../../components/header/IconIntoImg';
 
 const DEFAULT_TTL = 259200; // 3 days - 72 hours
 
