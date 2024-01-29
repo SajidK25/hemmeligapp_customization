@@ -584,7 +584,7 @@ const Home = () => {
                     <Group position="right" grow={isMobile}>
                         {!secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 loading={creatingSecret}
                                 type="submit"
@@ -632,14 +632,15 @@ const Home = () => {
                 </Text>
 
                 <Text size="sm" align="center">
-                    <BitcoinIcon /> : bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
+                    <BitcoinIcon /> {'  '} bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
                 <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
-                    <XMRIcon /> :
+                    <XMRIcon /> {'  '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
                 </Text>
                 <Text size="sm" align="center">
-                    <ETHIcon /> : 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
+                    <ETHIcon />
+                    {'  '} 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
                 </Text>
                 <Text size="sm" align="center" pt="md">
                     <Text size="sm" align="center">
