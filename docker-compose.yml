@@ -6,7 +6,7 @@ services:
             network: host
         container_name: silent-speaker-container
         image: silent_speaker
-        hostname: hemmelig
+        hostname: silent-speaker
         init: true
         volumes:
             - ./data/hemmelig/:/var/tmp/hemmelig/upload/files
@@ -27,6 +27,6 @@ services:
         restart: always
         stop_grace_period: 1m
         healthcheck:
-            test: 'wget -O /dev/null localhost:3000 || exit 1'
+            test: 'wget -O /dev/null 0.0.0.0:3000 || exit 1'
             timeout: 5s
             retries: 1
