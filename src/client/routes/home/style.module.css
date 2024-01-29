@@ -15,3 +15,8 @@
     background: red;
     color: white;
 }
+
+.text-hypen-box {
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
