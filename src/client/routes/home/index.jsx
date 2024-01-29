@@ -46,7 +46,6 @@ import { useTranslation } from 'react-i18next';
 import config from '../../config';
 
 import style from './style.module.css';
-import IconIntoImg from '../../components/header/IconIntoImg';
 
 const DEFAULT_TTL = 259200; // 3 days - 72 hours
 
@@ -278,7 +277,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size="h3" align="center">
+                    <Title order={1} size="h1" align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -386,41 +385,6 @@ const Home = () => {
                             />
                         </Tooltip>
                     </Group>
-
-                    {/* Disable file upload button*/}
-
-                    {/* <Group grow={isMobile}>
-                        <FileButton
-                            disabled={config.get('settings.upload_restriction') && !isLoggedIn}
-                            styles={groupMobileStyle}
-                            multiple
-                            {...form.getInputProps('files')}
-                        >
-                            {(props) => (
-                                <Button
-                                    {...props}
-                                    label={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? t('home.upload_files')
-                                            : ''
-                                    }
-                                    color={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? 'gray'
-                                            : 'hemmelig-orange'
-                                    }
-                                >
-                                    {t('home.upload_files')}
-                                </Button>
-                            )}
-                        </FileButton>
-
-                        {config.get('settings.upload_restriction') && !isLoggedIn && (
-                            <Text size="sm" align="center" mt="sm">
-                                {t('home.login_to_upload')}
-                            </Text>
-                        )}
-                    </Group> */}
 
                     {form.values.files?.length > 0 && (
                         <Group>
@@ -623,7 +587,11 @@ const Home = () => {
                     {t('home.link_only_works_once')}
 
                     <Text size="sm" align="center">
-                        Every donation, no matter the size, makes a significant impact. Let's build
+                        {t('home.app_name_meaning')} <span style={{ color: 'red' }}>❤</span>
+                    </Text>
+                    <Text size="sm" align="center">
+                        The project is hosted on our own server , electricity costs 😜 Every
+                        donation, no matter the size, makes a significant impact. Let's build
                         something amazing together! Thank you for being a part of our community and
                         supporting our vision.
                     </Text>
