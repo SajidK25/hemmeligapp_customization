@@ -389,41 +389,6 @@ const Home = () => {
                         </Tooltip>
                     </Group>
 
-                    {/* Disable file upload button*/}
-
-                    {/* <Group grow={isMobile}>
-                        <FileButton
-                            disabled={config.get('settings.upload_restriction') && !isLoggedIn}
-                            styles={groupMobileStyle}
-                            multiple
-                            {...form.getInputProps('files')}
-                        >
-                            {(props) => (
-                                <Button
-                                    {...props}
-                                    label={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? t('home.upload_files')
-                                            : ''
-                                    }
-                                    color={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? 'gray'
-                                            : 'hemmelig-orange'
-                                    }
-                                >
-                                    {t('home.upload_files')}
-                                </Button>
-                            )}
-                        </FileButton>
-
-                        {config.get('settings.upload_restriction') && !isLoggedIn && (
-                            <Text size="sm" align="center" mt="sm">
-                                {t('home.login_to_upload')}
-                            </Text>
-                        )}
-                    </Group> */}
-
                     {form.values.files?.length > 0 && (
                         <Group>
                             {form.values.files.map((file, index) => (
@@ -595,7 +560,7 @@ const Home = () => {
 
                         {secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 onClick={onNewSecret}
                             >
