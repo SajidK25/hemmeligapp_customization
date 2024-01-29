@@ -19,8 +19,8 @@
         }
     },
     "home": {
-        "app_subtitle": "Paste a password, confidential message, or private data.",
-        "welcome": "Ensure your sensitive data remains encrypted, secure, and confidential.",
+        "app_subtitle": "Share your secret with the person on the other side so that only they can read it.",
+        "welcome": "Our server does not collect any information; everything is encrypted on the fly.",
         "bummer": "Bummer!",
         "maintxtarea": "Write your sensitive information..",
         "title": "Title",
@@ -41,7 +41,7 @@
         "decryption_key": "Decryption key",
         "create_new": "Create new",
         "delete": "Delete",
-        "link_only_works_once": "The secret link, by default, is a one-time use only, after which it will vanish.",
+        "link_only_works_once": "The project is hosted on our own server, with full respect for the privacy of users.",
         "app_name_meaning": "[he`m:(ə)li], means secret in Norwegian.",
         "please_add_secret": "Please add a secret.",
         "14_days": "14 days",
