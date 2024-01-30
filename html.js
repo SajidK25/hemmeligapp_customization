@@ -1,6 +1,5 @@
 // This is where the modification of the html has to be done
-export default `<!DOCTYPE html>
-<html lang="en">
+export default `<!DOCTYPE html lang="en">
     <head>
         <meta charset="utf-8" />
         <title> SilentSpeaker.org - Paste a password, confidential message, or private data.</title>
