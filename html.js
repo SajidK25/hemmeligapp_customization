@@ -2,7 +2,7 @@
 export default `<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title> SilentSpeaker.org - Paste a password, confidential message, or private data.</title>
+        <title> Wordlock-og.xyz - Let's do some magic - share your secret and don't worry about any leaks of your information.</title>
 
         <link rel="apple-touch-icon" sizes="180x180" href="./public/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./public/icons/favicon-32x32.png">

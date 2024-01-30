@@ -19,8 +19,8 @@
         }
     },
     "home": {
-        "app_subtitle": "Share your secret with the person on the other side so that only they can read it.",
-        "welcome": "Our server does not collect any information; everything is encrypted on the fly.",
+        "app_subtitle": "Let's do some magic - share your secret and don't worry about any leaks of your information.",
+        "welcome": "Bulletproof encryption algorithm specially designed for you!",
         "bummer": "Bummer!",
         "maintxtarea": "Write your sensitive information..",
         "title": "Title",
@@ -41,7 +41,7 @@
         "decryption_key": "Decryption key",
         "create_new": "Create new",
         "delete": "Delete",
-        "link_only_works_once": "The project is hosted on our own server, with full respect for the privacy of users.",
+        "link_only_works_once": "Pssssttt, the secret can be read only once, and it gets deleted right after.",
         "app_name_meaning": "[he`m:(ə)li], means secret in Norwegian.",
         "please_add_secret": "Please add a secret.",
         "14_days": "14 days",

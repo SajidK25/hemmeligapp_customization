@@ -1,4 +1,6 @@
-import logo from './silenspeaker.png';
-const Logo = ({ ...rest }) => <img width={300} src={logo} alt="silenspeaker logo" />;
+import logo from './website-logo.png';
+const Logo = ({ ...rest }) => (
+    <img width={110} src={logo} style={{ marginTop: '-12px' }} alt="website logo" />
+);
 
 export default Logo;

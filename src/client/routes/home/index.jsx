@@ -280,7 +280,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size="h3" align="center">
+                    <Title order={1} size="h2" align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -550,7 +550,7 @@ const Home = () => {
                     <Group position="right" grow={isMobile}>
                         {!secretId && (
                             <Button
-                                color="blue"
+                                color="violet"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 loading={creatingSecret}
                                 type="submit"
@@ -561,7 +561,7 @@ const Home = () => {
 
                         {secretId && (
                             <Button
-                                color="blue"
+                                color="violet"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 onClick={onNewSecret}
                             >
@@ -591,7 +591,9 @@ const Home = () => {
                     {t('home.link_only_works_once')}
 
                     <Text size="sm" align="center">
-                        Every donation, no matter the size, makes a significant impact. Let's build
+                        Nothing is stored on our server. So sleep well 🧡 <br />
+                        The project is hosted on our own server , electricity costs 😜 Every
+                        donation, no matter the size, makes a significant impact. Let's build
                         something amazing together! Thank you for being a part of our community and
                         supporting our vision.
                     </Text>
