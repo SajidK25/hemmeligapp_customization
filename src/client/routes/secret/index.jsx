@@ -171,7 +171,7 @@ const Secret = () => {
                     </Text>
                 )}
 
-                {title && <TextInput icon={<IconHeading size={14} />} value={title} readOnly />}
+                {title && <TextInput icon={<IconLock size={14} />} value={title} readOnly />}
 
                 {isSecretOpen && <Quill value={secret} secretId={secretId} readOnly />}
 
@@ -233,7 +233,7 @@ const Secret = () => {
 
                     {isSecretOpen && (
                         <Button
-                            color="hemmelig"
+                            color="blue"
                             leftIcon={<IconSquarePlus size={14} />}
                             component={Link}
                             to="/"
