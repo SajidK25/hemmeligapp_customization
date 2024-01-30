@@ -30,7 +30,7 @@ const ApplicationShell = () => {
                         backgroundColor: theme.colors.dark[8],
                     })}
                 >
-                    <Text className="radial-text-gradient" align="center" size="h2">
+                    <Text weight="bold" className="radial-text-gradient" align="center" size="h2">
                         Powered by OnionGangster®2k24
                     </Text>
                 </Footer>

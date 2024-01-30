@@ -585,8 +585,8 @@ const Home = () => {
 
             <Divider my="sm" variant="dashed" />
 
-            <Stack spacing="xs" className="text-hypen-box">
-                <Text size="sm" align="center">
+            <Stack style={{ gap: '0px', fontSize: '0.875rem' }} className="text-hypen-box">
+                <Text pb="sm" size="sm" align="center">
                     {t('home.link_only_works_once')}
 
                     <Text size="sm" align="center">
@@ -595,16 +595,17 @@ const Home = () => {
                         supporting our vision.
                     </Text>
                 </Text>
-
-                <Text style={{ fontSize: '0.875rem' }} align="center">
-                    <BitcoinIcon /> {'  '} bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
-                    <br />
-                    <XMRIcon /> {'  '}
-                    44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
-                    <br />
-                    <ETHIcon />
-                    {'  '} 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
+                <Text size="sm" align="center">
+                    <BitcoinIcon /> bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
+                <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
+                    <XMRIcon />
+                    44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
+                </Text>
+                <Text size="sm" align="center">
+                    <ETHIcon /> 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
+                </Text>
+
                 <Text size="sm" align="center" pt="md">
                     <Text size="sm" align="center">
                         🙌 Together, we make it happen! 🙌"

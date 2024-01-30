@@ -164,7 +164,7 @@ html {
 }
 
 .radial-text-gradient {
-    font-weight: bold;
+    /* font-weight: bold; */
     background-image: linear-gradient(45deg, #7f00ff 40%, #00ff15 60%);
     -webkit-background-clip: text;
     background-clip: text;
