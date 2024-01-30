@@ -208,11 +208,7 @@ const Secret = () => {
 
                 <Group>
                     {!isSecretOpen && (
-                        <Button
-                            color="hemmelig"
-                            leftIcon={<IconEye size={14} />}
-                            onClick={fetchSecret}
-                        >
+                        <Button color="blue" leftIcon={<IconEye size={14} />} onClick={fetchSecret}>
                             {t('secret.view_secret')}
                         </Button>
                     )}
