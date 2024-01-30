@@ -531,7 +531,8 @@ const Home = () => {
                             <Button
                                 styles={() => ({
                                     root: {
-                                        backgroundColor: 'var(--color-contrast-second)',
+                                        backgroundImage:
+                                            'linear-gradient(45deg,#00ff15 0%, #7f00ff 80% )',
                                         '&:hover': {
                                             backgroundColor: 'var(--color-contrast-second)',
                                             filter: 'brightness(115%)',
@@ -599,7 +600,7 @@ const Home = () => {
                     <BitcoinIcon /> bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
                 <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
-                    <XMRIcon />
+                    <XMRIcon />{' '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
                 </Text>
                 <Text size="sm" align="center">
