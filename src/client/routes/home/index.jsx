@@ -596,14 +596,12 @@ const Home = () => {
                     </Text>
                 </Text>
 
-                <Text size="sm" align="center">
+                <Text style={{ fontSize: '0.875rem' }} align="center">
                     <BitcoinIcon /> {'  '} bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
-                </Text>
-                <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
+                    <br />
                     <XMRIcon /> {'  '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
-                </Text>
-                <Text size="sm" align="center">
+                    <br />
                     <ETHIcon />
                     {'  '} 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
                 </Text>
@@ -621,7 +619,11 @@ const Home = () => {
                         <Text size="sm" align="center">
                             Special thanks for providing ideas to Cyron
                         </Text>
-                        <img width={40} src="./Cyronlogowithoutbackground.png" alt="" />
+                        <img
+                            width={27}
+                            src="./Cyronlogowithoutbackground.png"
+                            alt="Cyron logo without background"
+                        />
                     </div>
                 </Text>
             </Stack>
