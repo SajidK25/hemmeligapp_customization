@@ -621,7 +621,7 @@ const Home = () => {
                         <Text size="sm" align="center">
                             Special thanks for providing ideas to Cyron
                         </Text>
-                        <img width={40} src="/public/Cyronlogowithoutbackground.png" alt="" />
+                        <img width={40} src="./Cyronlogowithoutbackground.png" alt="" />
                     </div>
                 </Text>
             </Stack>
