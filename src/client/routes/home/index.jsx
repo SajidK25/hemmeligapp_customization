@@ -389,41 +389,6 @@ const Home = () => {
                         </Tooltip>
                     </Group>
 
-                    {/* Disable file upload button*/}
-
-                    {/* <Group grow={isMobile}>
-                        <FileButton
-                            disabled={config.get('settings.upload_restriction') && !isLoggedIn}
-                            styles={groupMobileStyle}
-                            multiple
-                            {...form.getInputProps('files')}
-                        >
-                            {(props) => (
-                                <Button
-                                    {...props}
-                                    label={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? t('home.upload_files')
-                                            : ''
-                                    }
-                                    color={
-                                        config.get('settings.upload_restriction') && !isLoggedIn
-                                            ? 'gray'
-                                            : 'hemmelig-orange'
-                                    }
-                                >
-                                    {t('home.upload_files')}
-                                </Button>
-                            )}
-                        </FileButton>
-
-                        {config.get('settings.upload_restriction') && !isLoggedIn && (
-                            <Text size="sm" align="center" mt="sm">
-                                {t('home.login_to_upload')}
-                            </Text>
-                        )}
-                    </Group> */}
-
                     {form.values.files?.length > 0 && (
                         <Group>
                             {form.values.files.map((file, index) => (
@@ -584,7 +549,7 @@ const Home = () => {
                     <Group position="right" grow={isMobile}>
                         {!secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 loading={creatingSecret}
                                 type="submit"
@@ -595,7 +560,7 @@ const Home = () => {
 
                         {secretId && (
                             <Button
-                                color="hemmelig"
+                                color="blue"
                                 leftIcon={<IconSquarePlus size={14} />}
                                 onClick={onNewSecret}
                             >
@@ -632,14 +597,15 @@ const Home = () => {
                 </Text>
 
                 <Text size="sm" align="center">
-                    <BitcoinIcon /> : bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
+                    <BitcoinIcon /> {'  '} bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
                 <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
-                    <XMRIcon /> :
+                    <XMRIcon /> {'  '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
                 </Text>
                 <Text size="sm" align="center">
-                    <ETHIcon /> : 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
+                    <ETHIcon />
+                    {'  '} 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
                 </Text>
                 <Text size="sm" align="center" pt="md">
                     <Text size="sm" align="center">

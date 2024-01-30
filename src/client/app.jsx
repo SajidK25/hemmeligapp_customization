@@ -12,6 +12,7 @@ const HemmeligApplication = () => {
                 theme={{
                     colorScheme: 'dark',
                     colors: {
+                        'light-blue': ['#ADD8E6'],
                         hemmelig: [
                             '#ffffff',
                             '#eaf5f4',
