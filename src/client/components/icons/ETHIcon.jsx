@@ -15,5 +15,4 @@ const ETHIcon = () => {
         </svg>
     );
 };
-
 export default ETHIcon;

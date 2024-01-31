@@ -12,5 +12,4 @@ const BitcoinIcon = () => {
         </svg>
     );
 };
-
 export default BitcoinIcon;
