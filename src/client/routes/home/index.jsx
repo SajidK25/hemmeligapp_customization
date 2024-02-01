@@ -82,6 +82,8 @@ const Home = () => {
 
     const { t } = useTranslation();
 
+    const primaryFontStyle = `${isMobile ? '0.775rem' : 'sm'}`;
+
     useEffect(() => {
         if (secretId) {
             secretRef.current.focus();
@@ -280,7 +282,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size="h3" align="center">
+                    <Title order={1} size={`${isMobile ? '1.0rem' : 'h3'}`} align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -587,29 +589,29 @@ const Home = () => {
 
             <Divider my="sm" variant="dashed" />
 
-            <Stack style={{ gap: '0px', fontSize: '0.875rem' }} className="text-hypen-box">
-                <Text pb="sm" size="sm" align="center">
+            <Stack style={{ gap: '0px' }} className="text-hypen-box">
+                <Text pb="sm" size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
 
-                    <Text size="sm" align="center">
+                    <Text size={primaryFontStyle} align="center">
                         Every donation, no matter the size, makes a significant impact. Let's build
                         something amazing together! Thank you for being a part of our community and
                         supporting our vision.
                     </Text>
                 </Text>
-                <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center">
                     <BitcoinIcon /> bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
-                <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
+                <Text size={primaryFontStyle} align="center" style={{ overflowWrap: 'break-word' }}>
                     <XMRIcon />{' '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
                 </Text>
-                <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center">
                     <ETHIcon /> 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
                 </Text>
 
-                <Text size="sm" align="center" pt="md">
-                    <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center" pt="md">
+                    <Text size={primaryFontStyle} align="center">
                         🙌 Together, we make it happen! 🙌"
                     </Text>
                     <div
@@ -619,7 +621,7 @@ const Home = () => {
                             alignItems: 'center',
                         }}
                     >
-                        <Text size="sm" align="center">
+                        <Text size={primaryFontStyle} align="center">
                             Special thanks for providing ideas to Cyron
                         </Text>
                         <img

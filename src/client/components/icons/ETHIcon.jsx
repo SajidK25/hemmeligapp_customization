@@ -1,6 +1,6 @@
 const ETHIcon = () => {
     return (
-        <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <svg width="17px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
                 <circle cx={16} cy={16} r={16} fill="#627EEA" />
                 <g fill="#FFF" fillRule="nonzero">
