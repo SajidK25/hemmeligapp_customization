@@ -533,6 +533,7 @@ const Home = () => {
                                     root: {
                                         backgroundImage:
                                             'linear-gradient(45deg,#00ff15 0%, #7f00ff 80% )',
+                                        border: 'none',
                                         '&:hover': {
                                             backgroundColor: 'var(--color-contrast-second)',
                                             filter: 'brightness(115%)',

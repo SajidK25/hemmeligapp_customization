@@ -20,6 +20,9 @@ const UserAccount = lazy(() => import('./routes/account/account'));
 const AppRoutes = () => {
     return (
         <Routes>
+            {/* This code added for error elememt like 404 page routes */}
+            <Route path="*" element={<div style={{ width: '100%', height: '100%' }}></div>} />
+
             <Route path="/" element={<ApplicationShell />}>
                 <Route index element={<Home />} />
                 <Route path="secret/:encryptionKey/:secretId" element={<Secret />} />
@@ -31,7 +34,7 @@ const AppRoutes = () => {
                 <Route path="terms" element={<Terms />} />
             </Route>
 
-            <Route path="/account" element={<AdminShell />}>
+            {/* <Route path="/account" element={<AdminShell />}>
                 <Route index element={<Account />} />
                 <Route path="account" element={<Account />} />
                 <Route path="secrets" element={<Secrets />} />
@@ -40,7 +43,7 @@ const AppRoutes = () => {
                 <Route path="users" element={<Users />} />
                 <Route path="privacy" element={<Privacy />} />
                 <Route path="terms" element={<Terms />} />
-            </Route>
+            </Route> */}
         </Routes>
     );
 };
