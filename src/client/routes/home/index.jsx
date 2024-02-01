@@ -81,6 +81,7 @@ const Home = () => {
     const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
     const { t } = useTranslation();
+    const primaryFontStyle = `${isMobile ? '0.775rem' : 'sm'}`;
 
     useEffect(() => {
         if (secretId) {
@@ -280,7 +281,7 @@ const Home = () => {
                 })}
             >
                 <Stack>
-                    <Title order={1} size="h2" align="center">
+                    <Title order={1} size={`${isMobile ? '1.0rem' : 'h1'}`} align="center">
                         {t('home.app_subtitle')}
                     </Title>
                     <Text size="sm" align="center">
@@ -533,6 +534,7 @@ const Home = () => {
                                     root: {
                                         backgroundImage:
                                             'linear-gradient(45deg,#00ff15 0%, #7f00ff 80% )',
+                                        border: 'none',
                                         '&:hover': {
                                             backgroundColor: 'var(--color-contrast-second)',
                                             filter: 'brightness(115%)',
@@ -586,11 +588,11 @@ const Home = () => {
 
             <Divider my="sm" variant="dashed" />
 
-            <Stack style={{ gap: '0px', fontSize: '0.875rem' }} className="text-hypen-box">
-                <Text pb="sm" size="sm" align="center">
+            <Stack style={{ gap: '0px' }} className="text-hypen-box">
+                <Text pb="sm" size={primaryFontStyle} align="center">
                     {t('home.link_only_works_once')}
 
-                    <Text size="sm" align="center">
+                    <Text size={primaryFontStyle} align="center">
                         Nothing is stored on our server. So sleep well 🧡 <br />
                         The project is hosted on our own server , electricity costs 😜 Every
                         donation, no matter the size, makes a significant impact. Let's build
@@ -598,19 +600,19 @@ const Home = () => {
                         supporting our vision.
                     </Text>
                 </Text>
-                <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center">
                     <BitcoinIcon /> bc1qkxg4d06nmzgprffewpdx384mx5mfj0vlzn857q
                 </Text>
-                <Text size="sm" align="center" style={{ overflowWrap: 'break-word' }}>
+                <Text size={primaryFontStyle} align="center" style={{ overflowWrap: 'break-word' }}>
                     <XMRIcon />{' '}
                     44ZkP4ynHw19Mqe3FJuUdJE6mEdEgNK6GTbbRg68neYYBmJbRaxPqJwjpKPVxpuuWLXKihLJRs1i4HxxbLDpZaCSJGCL5hN
                 </Text>
-                <Text size="sm" align="center">
+                <Text size={primaryFontStyle} align="center">
                     <ETHIcon /> 0x05d61dD97c39ac16eC938EbCBa056B0e906Bde94
                 </Text>
 
-                <Text size="sm" align="center" pt="md">
-                    <Text size="sm" align="center">
+                <Text align="center" pt="md">
+                    <Text size={primaryFontStyle} align="center">
                         🙌 Together, we make it happen! 🙌"
                     </Text>
                     <div
@@ -620,7 +622,7 @@ const Home = () => {
                             alignItems: 'center',
                         }}
                     >
-                        <Text size="sm" align="center">
+                        <Text size={primaryFontStyle} align="center">
                             Special thanks for providing ideas to Cyron
                         </Text>
                         <img

@@ -20,3 +20,10 @@
     overflow-wrap: break-word;
     hyphens: manual;
 }
+
+.appSubtitleFont-for-mobile {
+    font-size: '10rem';
+}
+.appSubtitleFont-for-web {
+    font-size: '1.375rem';
+}
