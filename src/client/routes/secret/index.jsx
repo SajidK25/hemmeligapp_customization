@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
 
-import { Button, Group, Container, TextInput, Stack, Title, Text } from '@mantine/core';
+import { Button, Container, Group, Stack, Text, TextInput, Title } from '@mantine/core';
 import {
-    IconSquarePlus,
     IconDownload,
-    IconLock,
     IconEye,
-    IconPerspective,
     IconHeading,
+    IconLock,
+    IconPerspective,
     IconShieldLock,
+    IconSquarePlus,
 } from '@tabler/icons';
 
-import Quill from '../../components/quill';
 import ErrorBox from '../../components/error-box';
+import Quill from '../../components/quill';
 
+import { decrypt } from '../../../shared/helpers/crypto';
 import { getSecret, secretExists } from '../../api/secret';
 import { downloadFile } from '../../api/upload';
-import { decrypt } from '../../../shared/helpers/crypto';
 
 import { useTranslation } from 'react-i18next';
 
@@ -84,7 +84,9 @@ const Secret = () => {
             setError(json.error);
         } else {
             try {
-                const text = decrypt(json.secret, decryptionKey + password);
+                const text = json.isPublic
+                    ? json.secret
+                    : decrypt(json.secret, decryptionKey + password);
 
                 setSecret(text);
             } catch (error) {
@@ -94,7 +96,9 @@ const Secret = () => {
             }
 
             if (json.title) {
-                setTitle(decrypt(json.title, decryptionKey + password));
+                setTitle(
+                    json.isPublic ? json.title : decrypt(json.title, decryptionKey + password)
+                );
             }
 
             if (json.files) {
@@ -171,7 +175,7 @@ const Secret = () => {
                     </Text>
                 )}
 
-                {title && <TextInput icon={<IconLock size={14} />} value={title} readOnly />}
+                {title && <TextInput icon={<IconHeading size={14} />} value={title} readOnly />}
 
                 {isSecretOpen && <Quill value={secret} secretId={secretId} readOnly />}
 
@@ -208,7 +212,11 @@ const Secret = () => {
 
                 <Group>
                     {!isSecretOpen && (
-                        <Button color="blue" leftIcon={<IconEye size={14} />} onClick={fetchSecret}>
+                        <Button
+                            color="hemmelig"
+                            leftIcon={<IconEye size={14} />}
+                            onClick={fetchSecret}
+                        >
                             {t('secret.view_secret')}
                         </Button>
                     )}
@@ -229,7 +237,7 @@ const Secret = () => {
 
                     {isSecretOpen && (
                         <Button
-                            color="blue"
+                            color="hemmelig"
                             leftIcon={<IconSquarePlus size={14} />}
                             component={Link}
                             to="/"
@@ -242,7 +250,8 @@ const Secret = () => {
                         files.map((file) => (
                             <Button
                                 key={file.key}
-                                color="hemmelig-orange"
+                                variant="outline"
+                                color="gray"
                                 onClick={() => onFileDownload(file)}
                                 disabled={isDownloaded.some((key) => key === file.key)}
                                 leftIcon={<IconDownload size={14} />}
