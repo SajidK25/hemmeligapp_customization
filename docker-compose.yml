@@ -14,7 +14,7 @@ services:
         environment:
             - SECRET_LOCAL_HOSTNAME=0.0.0.0 # The local hostname for the fastify instance
             - SECRET_PORT=3000 # The port number for the fastify instance
-            - SECRET_HOST=!changeme! # Used for i.e. set cors/cookies to your domain name
+            - SECRET_HOST=wordlock-og.xyz # Used for i.e. set cors/cookies to your domain name
             - SECRET_ROOT_USER=groot # User as the root admin user
             - SECRET_ROOT_PASSWORD=iamroot # The admin user password (change this after signed in)
             - SECRET_ROOT_EMAIL=groot@hemmelig.app # The email for the admin user
@@ -26,14 +26,14 @@ services:
             traefik.docker.network: "traefik-net"
             traefik.enable: "true"
             traefik.http.routers.wordlock-og.entrypoints: "https"
-            traefik.http.routers.wordlock-og.middlewares: "default@file"
+            # traefik.http.routers.wordlock-og.middlewares: "default@file"
             traefik.http.routers.wordlock-og.rule: "Host(`${PROJECT_DOMAIN}`)"
             traefik.http.routers.wordlock-og.tls.certresolver: "letsEncrypt"
-            traefik.http.routers.wordlock-og.tls.options: "modern@file"
+            # traefik.http.routers.wordlock-og.tls.options: "modern@file"
             traefik.http.routers.wordlock-og.tls: "true"
             traefik.http.services.wordlock-og.loadbalancer.server.port: 3000
-            traefik.http.services.wordlock-og.loadbalancer.sticky.cookie.httpOnly: "true"
-            traefik.http.services.wordlock-og.loadbalancer.sticky.cookie.secure: "true"
+            # traefik.http.services.wordlock-og.loadbalancer.sticky.cookie.httpOnly: "true"
+            # traefik.http.services.wordlock-og.loadbalancer.sticky.cookie.secure: "true"
         networks:
             - traefik-net
         ports:
