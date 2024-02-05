@@ -14,7 +14,7 @@ services:
         environment:
             - SECRET_LOCAL_HOSTNAME=0.0.0.0 # The local hostname for the fastify instance
             - SECRET_PORT=3000 # The port number for the fastify instance
-            - SECRET_HOST=!changeme! # Used for i.e. set cors/cookies to your domain name
+            - SECRET_HOST=silentspeaker.org # Used for i.e. set cors/cookies to your domain name
             - SECRET_ROOT_USER=groot # User as the root admin user
             - SECRET_ROOT_PASSWORD=iamroot # The admin user password (change this after signed in)
             - SECRET_ROOT_EMAIL=groot@hemmelig.app # The email for the admin user
@@ -26,14 +26,14 @@ services:
             traefik.docker.network: "traefik-net"
             traefik.enable: "true"
             traefik.http.routers.silent-speaker.entrypoints: "https"
-            traefik.http.routers.silent-speaker.middlewares: "default@file"
+            # traefik.http.routers.silent-speaker.middlewares: "default@file"
             traefik.http.routers.silent-speaker.rule: "Host(`${PROJECT_DOMAIN}`)"
             traefik.http.routers.silent-speaker.tls.certresolver: "letsEncrypt"
-            traefik.http.routers.silent-speaker.tls.options: "modern@file"
+            # traefik.http.routers.silent-speaker.tls.options: "modern@file"
             traefik.http.routers.silent-speaker.tls: "true"
             traefik.http.services.silent-speaker.loadbalancer.server.port: 3000
-            traefik.http.services.silent-speaker.loadbalancer.sticky.cookie.httpOnly: "true"
-            traefik.http.services.silent-speaker.loadbalancer.sticky.cookie.secure: "true"
+            # traefik.http.services.silent-speaker.loadbalancer.sticky.cookie.httpOnly: "true"
+            # traefik.http.services.silent-speaker.loadbalancer.sticky.cookie.secure: "true"
         networks:
             - traefik-net
         ports:
